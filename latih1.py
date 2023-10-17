@@ -15,7 +15,6 @@ def cari_bilangan_prima (awal, akhir):
   return list_bilangan_prima
 
 def input_dynamic():
-  print()
   inputan = input("Enter numbers range awal - akhir \"28, 57\" or \"21,18\": ")
   if inputan.find(',') < 0:
     print('Please Follow Input Format To Use App awal - akhir \"28, 57\"')

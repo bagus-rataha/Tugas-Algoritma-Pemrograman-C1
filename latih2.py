@@ -2,7 +2,7 @@ def pyramid():
     tinggi = input("Masukkan Tinggi Yang diinginkan : ")
     if not tinggi.isdigit():
         print('Please Only Input Numbers!!!')
-        pyramid()
+        return pyramid()
     tinggi = int(tinggi)
     for i in range(1, tinggi + 1):
         baris = ''

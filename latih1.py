@@ -18,15 +18,15 @@ def input_dynamic():
   inputan = input("Enter numbers range awal - akhir \"28, 57\" or \"21,18\": ")
   if inputan.find(',') < 0:
     print('Please Follow Input Format To Use App awal - akhir \"28, 57\"')
-    input_dynamic()
- 
+    return input_dynamic()
+    
   start, end = inputan.split(',')
   start = start.strip()
   end = end.strip()
 
   if not start.isdigit() or not end.isdigit():
       print('Please Only Input Numbers!!!')
-      input_dynamic()
+      return input_dynamic()
   
   print("Calculating...")
   list_prim = cari_bilangan_prima(int(start), int(end))
@@ -35,7 +35,7 @@ def input_dynamic():
     string += f" | [" + str(index+1) + ".] " + str(number) +" \n" if (index+1) % 5 == 0 and (index+1) >= 5 else f" | [" + str(index+1) + ".] " + str(number) +" " 
   
   string = string if string != '' else "There's no Prime Numbers in This Range"
-  return string
+  print(string)
 
 
-print(input_dynamic())
+input_dynamic()

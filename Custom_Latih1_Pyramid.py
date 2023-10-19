@@ -1,12 +1,12 @@
 def pyramid():
-    tinggi = input("Masukkan Tinggi Yang diinginkan (Max 40): ")
+    max = 9
+    tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max) + ") : ")
     if not tinggi.isdigit():
         print('Please Only Input Numbers!!!')
         return pyramid()
     tinggi = int(tinggi)
-    
-    if tinggi >= 50:
-        print('Max Height is 50 for better view.')
+    if tinggi > max:
+        print(f'Max Height is ' + str(max) + ' for better view.')
         return pyramid()
     
     for i in range(1, tinggi + 1):

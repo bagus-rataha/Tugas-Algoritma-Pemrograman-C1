@@ -32,7 +32,7 @@ def input_dynamic():
   list_prim = cari_bilangan_prima(int(start), int(end))
   string = ''
   for index, number in enumerate(list_prim):
-    string += f" | [" + str(index+1) + ".] " + str(number) +" \n" if (index+1) % 5 == 0 and (index+1) >= 5 else f" | [" + str(index+1) + ".] " + str(number) +" " 
+    string += f" | [" + str(index+1) + ".] " + str(number) +" \n" if (index+1) % 5 == 0 else f" | [" + str(index+1) + ".] " + str(number) +" " 
   
   string = string if string != '' else "There's no Prime Numbers in This Range"
   print(string)

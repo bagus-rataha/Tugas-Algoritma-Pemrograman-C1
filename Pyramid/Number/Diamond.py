@@ -1,14 +1,4 @@
-def pyramid():
-    max = 9
-    tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max) + ") : ")
-    if not tinggi.isdigit():
-        print('Please Only Input Numbers!!!')
-        return pyramid()
-    tinggi = int(tinggi)
-    if tinggi > max:
-        print(f'Max Height is ' + str(max) + ' for better view.')
-        return pyramid()
-    
+def diamond(tinggi):
     for i in range(1, tinggi + 1):
         baris = ''
 
@@ -58,4 +48,16 @@ def pyramid():
         # Menampilkan baris
         print(baris)
 
-pyramid()
+def sanitize_input():
+    max = 9
+    tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max) + ") : ")
+    if not tinggi.isdigit():
+        print('Please Only Input Numbers!!!')
+        return sanitize_input()
+    tinggi = int((int(tinggi) + 1) / 2)
+    if tinggi > max:
+        print(f'Max Height is ' + str(max) + ' for better view.')
+        return sanitize_input()
+    return diamond(tinggi)
+
+sanitize_input()

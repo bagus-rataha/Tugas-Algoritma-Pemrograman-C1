@@ -1,19 +1,5 @@
-def pyramid():
-    max_height = 9
-    tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max_height) + ") : ")
-    if not tinggi.isdigit():
-        print('Please Only Input Numbers!!!')
-        return pyramid()
+def pyramid(tinggi, banyaknya_pyramid):
     
-    max_pyramid = 50
-    banyaknya_pyramid = input("Masukkan Jumlah Pyramid Yang diinginkan ("+ str(max_pyramid) + ") : ")
-    if not banyaknya_pyramid.isdigit():
-        print('Please Only Input Numbers!!!')
-        return pyramid()
-    
-    banyaknya_pyramid = int(banyaknya_pyramid)
-    
-    tinggi = int(tinggi)
     for i in range(banyaknya_pyramid):
         for i in range(1, tinggi + 1):
             baris = ''
@@ -39,4 +25,22 @@ def pyramid():
             # Menampilkan baris
             print(baris)
 
-pyramid()
+
+def sanitize_input():
+    max_height = 9
+    tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max_height) + ") : ")
+    if not tinggi.isdigit():
+        print('Please Only Input Numbers!!!')
+        return sanitize_input()
+    
+    max_pyramid = 50
+    banyaknya_pyramid = input("Masukkan Jumlah Pyramid Yang diinginkan ("+ str(max_pyramid) + ") : ")
+    if not banyaknya_pyramid.isdigit():
+        print('Please Only Input Numbers!!!')
+        return sanitize_input()
+    
+    banyaknya_pyramid = int(banyaknya_pyramid)
+    tinggi = int(tinggi)
+    return pyramid(tinggi, banyaknya_pyramid)
+
+sanitize_input()

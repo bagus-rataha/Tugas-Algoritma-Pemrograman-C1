@@ -54,7 +54,7 @@ def sanitize_input():
     if not tinggi.isdigit():
         print('Please Only Input Numbers!!!')
         return sanitize_input()
-    tinggi = int((int(tinggi) + 1) / 2)
+    tinggi = int(tinggi)
     if tinggi > max:
         print(f'Max Height is ' + str(max) + ' for better view.')
         return sanitize_input()

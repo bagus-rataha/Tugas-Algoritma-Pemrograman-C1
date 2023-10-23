@@ -1,4 +1,5 @@
 def diamond(tinggi, banyaknya_diamond, state):
+    letter_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     for i in range(banyaknya_diamond):
         # Atas
         for i in range(1, tinggi + 1):
@@ -11,7 +12,7 @@ def diamond(tinggi, banyaknya_diamond, state):
             angka = 1
             # Section Line Numbers
             for k in range(1, i + 1): #123
-                baris += str(angka) #123
+                baris += letter_list[angka-1] #123
                 angka += 1 #234
                 
             angka -= 2 #karna di awal sudah nambah 1 dan di akhir ditambah 1 lagi, supaya turun 2 angka sesuai urutan perlu dikurangin 2
@@ -19,7 +20,7 @@ def diamond(tinggi, banyaknya_diamond, state):
             # Section Total Reverse Numbers Line
             for l in range(i - 1, 0, -1):
                 # print(i-1)
-                baris += str(l)
+                baris += letter_list[l-1]
                 angka -= 1
             
             # Menampilkan baris
@@ -37,7 +38,7 @@ def diamond(tinggi, banyaknya_diamond, state):
                 angka = 1
                 # Section Line Numbers
                 for k in range(1, i + 1): #123
-                    baris += str(angka) #123
+                    baris += letter_list[angka-1] #123
                     angka += 1 #234
                     
                 angka -= 2 #karna di awal sudah nambah 1 dan di akhir ditambah 1 lagi, supaya turun 2 angka sesuai urutan perlu dikurangin 2
@@ -45,7 +46,7 @@ def diamond(tinggi, banyaknya_diamond, state):
                 # Section Total Reverse Numbers Line
                 for l in range(i - 1, 0, -1):
                     # print(i-1)
-                    baris += str(l)
+                    baris += letter_list[l-1]
                     angka -= 1
                 
                 # Menampilkan baris
@@ -61,7 +62,7 @@ def diamond(tinggi, banyaknya_diamond, state):
                 angka = 1
                 # Section Line Numbers
                 for k in range(1, i + 1): #123
-                    baris += str(angka) #123
+                    baris += letter_list[angka-1] #123
                     angka += 1 #234
                     
                 angka -= 2 #karna di awal sudah nambah 1 dan di akhir ditambah 1 lagi, supaya turun 2 angka sesuai urutan perlu dikurangin 2
@@ -69,7 +70,7 @@ def diamond(tinggi, banyaknya_diamond, state):
                 # Section Total Reverse Numbers Line
                 for l in range(i - 1, 0, -1):
                     # print(i-1)
-                    baris += str(l)
+                    baris += letter_list[l-1]
                     angka -= 1
                 
                 # Menampilkan baris

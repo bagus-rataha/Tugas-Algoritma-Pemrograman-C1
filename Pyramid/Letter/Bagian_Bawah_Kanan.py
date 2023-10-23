@@ -1,4 +1,5 @@
 def diamond(tinggi):
+    letter_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     # for i in range(1, tinggi + 1):
     #     baris = ''
 
@@ -42,7 +43,7 @@ def diamond(tinggi):
         # Section Total Reverse Numbers Line
         for l in range(i, 0, -1):
             # print(i-1)
-            baris += str(l)
+            baris += letter_list[l-1]
             angka -= 1
         
         # Menampilkan baris

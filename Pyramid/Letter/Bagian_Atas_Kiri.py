@@ -1,4 +1,5 @@
 def pyramid(tinggi):
+    letter_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     for i in range(1, tinggi + 1):
         baris = ''
 
@@ -9,7 +10,7 @@ def pyramid(tinggi):
         angka = 1
         # Section Line Numbers
         for k in range(1, i + 1): #123
-            baris += str(angka) #123
+            baris += letter_list[angka-1] #123
             angka += 1 #234
             
         angka -= 2 #karna di awal sudah nambah 1 dan di akhir ditambah 1 lagi, supaya turun 2 angka sesuai urutan perlu dikurangin 2

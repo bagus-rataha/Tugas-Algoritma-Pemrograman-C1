@@ -42,7 +42,7 @@ def diamond(tinggi):
         # Section Total Reverse Numbers Line
         for l in range(i, 0, -1):
             # print(i-1)
-            baris += str(l)
+            baris += "*"
             angka -= 1
         
         # Menampilkan baris

@@ -11,7 +11,7 @@ def pyramid(tinggi, banyaknya_pyramid):
             angka = 1
             # Section Line Numbers
             for k in range(1, i + 1): #123
-                baris += str(angka) #123
+                baris += "*" #123
                 angka += 1 #234
                 
             angka -= 2 #karna di awal sudah nambah 1 dan di akhir ditambah 1 lagi, supaya turun 2 angka sesuai urutan perlu dikurangin 2
@@ -19,7 +19,7 @@ def pyramid(tinggi, banyaknya_pyramid):
             # Section Total Reverse Numbers Line
             for l in range(i - 1, 0, -1):
                 # print(i-1)
-                baris += str(l)
+                baris += "*"
                 angka -= 1
 
             # Menampilkan baris

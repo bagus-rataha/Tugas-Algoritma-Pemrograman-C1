@@ -24,7 +24,7 @@ def pyramid(tinggi):
         print(baris)
 
 def sanitize_input():
-    max = 9
+    max = 30
     tinggi = input("Masukkan Tinggi Yang diinginkan ("+ str(max) + ") : ")
     if not tinggi.isdigit():
         print('Please Only Input Numbers!!!')

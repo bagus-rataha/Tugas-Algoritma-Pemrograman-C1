@@ -12,17 +12,16 @@ def bagi(a,b):
     return a / b
 
 def kali(a,b):
-    return a * b\
-
+    return a * b
 
 print(f"Selamat datang diKalkulator sederhana.Silahkan masukan angka!\n")
 
-# Input angka untuk kalkulator sederhana 
+# Input angka untuk kalkulator sederhana dengan fungsi pembulatan
 
-angka1 = float(input("Masukan angka pertama :"))
+angka1 = round(float(input("Masukan angka pertama :")))
 print(f'\nPiliih operator \n 1. + (tambah) \n 2. - (kurang)\n 3. / (bagi) \n 4. x (kali)')
 operator= input("\nMasukan operator yang anda inginkan :(+,-,/,x) ")
-angka2 = float(input("\nMasukan angka kedua :"))
+angka2 = round(float(input("\nMasukan angka kedua :")))
 
 
 if operator == "1" :
